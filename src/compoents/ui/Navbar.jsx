@@ -21,9 +21,8 @@ const Navbar = () => {
     };
   }, []);
 
-
   return (
-    <nav className= "bg-white dark:bg-[#000] fixed top-0 left-0 w-full z-10 transition-all duration-300">
+    <nav className={`fixed top-0 left-0 w-full z-10 transition-all duration-300 ${isScrolled ? 'backdrop bg-black/80' : 'bg-black'}`}>
       <div className= "max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 h-24">
         <a
           href="https://flowbite.com/"
@@ -60,7 +59,7 @@ const Navbar = () => {
           </svg>
         </button>
         <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-[#000000] dark:border-gray-700">
+          <ul className={`font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0  ${isScrolled ? 'backdrop bg-black/10' : 'bg-black'} dark:border-gray-700`}>
             <li>
               <a
                 href="#"

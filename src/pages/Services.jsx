@@ -1,5 +1,7 @@
+import Card from "../compoents/ui/Card";
 import "../css/section.css";
 import { FaRegCalendarAlt } from "react-icons/fa";
+import cardsData from "../assets/data/cards";
 
 const Services = () => {
   return (
@@ -30,7 +32,10 @@ const Services = () => {
       </section>
       <section className="h-[30vh] bg-[#000000]">
         <h2 className="text-white text-5xl pt-36 text-center">
-          CARSTAR Services
+          <span className="text-red-600 font-bold hover:text-red-900 ease-in">
+            CARSTAR
+          </span>{" "}
+          Services
         </h2>
         <p className="text-white text-center px-60 mt-12 font-semibold text-lg">
           CARSTAR features state-of-the-art unibody and frame repair equipment,
@@ -85,6 +90,15 @@ const Services = () => {
               sit.
             </div>
           </div>
+        </div>
+      </section>
+      <section className="h-full bg-[#000000] flex justify-center">
+        <div className="w-fit grid justify-center grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
+        {cardsData.map((card, index)=>(
+          <div key={index} className="flex justify-center">
+          <Card title={card.title} desc={card.desc} cardimg={card.cardimg} />
+        </div>
+        ))}
         </div>
       </section>
     </>

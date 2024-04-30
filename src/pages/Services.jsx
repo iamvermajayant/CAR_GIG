@@ -2,6 +2,7 @@ import Card from "../compoents/ui/Card";
 import "../css/section.css";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import cardsData from "../assets/data/cards";
+import Button from "../compoents/ui/Button";
 
 const Services = () => {
   return (
@@ -21,7 +22,6 @@ const Services = () => {
                   className="py-2 outline-none border-none px-1"
                   placeholder="Enter the city name"
                 />
-                {/* <button className="px-2  bg-gradient-to-tl from-red-500 to-red-800 outline-none text-white  ">Submit</button> */}
                 <button className="px-2 bg-gradient-to-tl from-red-500 to-red-800 outline-none text-white hover:from-red-600 hover:to-red-900">
                   Submit
                 </button>
@@ -46,10 +46,24 @@ const Services = () => {
           technologies and materials.
         </p>
       </section>
+      <section className="h-full pt-48 bg-[#000000] flex justify-center">
+        <div className="w-fit grid justify-center grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
+          {cardsData.map((card, index) => (
+            <div key={index} className="flex justify-center">
+              <Card
+                title={card.title}
+                desc={card.desc}
+                cardimg={card.cardimg}
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section className="h-screen bg-[#000000]">
         <div className="flex justify-center items-center py-36 h-[100vh]">
           <div
-            className="h-[60vh] w-full relative"
+            className="h-[50vh] w-full relative"
             style={{
               backgroundImage: "url('/src/assets/carstar-cares-star.jpg')",
               backgroundPosition: "50%",
@@ -57,13 +71,18 @@ const Services = () => {
               backgroundSize: "cover",
             }}
           >
-            <div className="text-white absolute flex items-center bottom-0 left-0 right-0 backdrop bg-black/30 h-[30vh] ">
-              new Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
-              sit.
+            <div className="text-white absolute flex flex-col items-start px-5 py-5 bottom-0 left-0 right-0 backdrop bg-black/30 h-[30vh] ">
+            <h2 className="text-white text-3xl font-semibold italic">CARSTAR Cares</h2>
+              <p className="text-sm mt-5">
+                Our company has always done so much more than just repairing
+                cars. We want to make the world a better place, one car, one
+                person and one community at time.
+              </p>
+              <Button/>
             </div>
           </div>
           <div
-            className="h-[60vh] w-full relative flex justify-center"
+            className="h-[50vh] w-full relative flex justify-center"
             style={{
               backgroundImage: "url('/src/assets/national-warranty.jpg')",
               backgroundPosition: "50%",
@@ -71,13 +90,18 @@ const Services = () => {
               backgroundSize: "cover",
             }}
           >
-            <div className="text-white absolute flex items-center justify-center bottom-0 left-0 right-0 backdrop bg-black/30 h-[30vh]">
-              new Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
-              sit.
+            <div className="text-white absolute flex flex-col items-start justify-start px-5 py-5 bottom-0 left-0 right-0 backdrop bg-black/30 h-[30vh]">
+            <h2 className="text-white text-3xl font-semibold italic">CARSTAR Cares</h2>
+              <p className="text-sm mt-5">
+                Our company has always done so much more than just repairing
+                cars. We want to make the world a better place, one car, one
+                person and one community at time.
+              </p>
+              <Button/>
             </div>
           </div>
           <div
-            className="h-[60vh] w-full relative flex justify-center"
+            className="h-[50vh] w-full relative flex justify-center"
             style={{
               backgroundImage: "url('/src/assets/rental-car.jpg')",
               backgroundPosition: "50%",
@@ -85,20 +109,16 @@ const Services = () => {
               backgroundSize: "cover",
             }}
           >
-            <div className="text-white absolute flex items-center justify-center bottom-0 left-0 right-0 backdrop bg-black/30 h-[30vh] ">
-              new Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
-              sit.
+            <div className="text-white absolute flex flex-col items-start px-5 justify-start pt-5 bottom-0 left-0 right-0 backdrop bg-black/30 h-[30vh] ">
+              <h2 className="text-white text-3xl font-semibold italic">CARSTAR Cares</h2>
+              <p>
+                Our company has always done so much more than just repairing
+                cars. We want to make the world a better place, one car, one
+                person and one community at time.
+              </p>
+              <Button/>
             </div>
           </div>
-        </div>
-      </section>
-      <section className="h-full bg-[#000000] flex justify-center">
-        <div className="w-fit grid justify-center grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
-        {cardsData.map((card, index)=>(
-          <div key={index} className="flex justify-center">
-          <Card title={card.title} desc={card.desc} cardimg={card.cardimg} />
-        </div>
-        ))}
         </div>
       </section>
     </>

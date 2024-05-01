@@ -7,7 +7,7 @@ import Button from "../compoents/ui/Button";
 const Services = () => {
   return (
     <>
-      <section className="box h-[100vh] w-full flex justify-center items-stat bg-[url('/src/assets/car.jpg')] bg-no-repeat bg-cover bg-center">
+      <section className="box h-[100vh] w-full flex justify-center items-start bg-[url('/src/assets/car.jpg')] bg-no-repeat bg-cover bg-center">
         <div>
           <div className="flex justify-between h-[112vh] flex-col items-center">
             <h2 className="text-gray-300 font-extralight mt-28 text-8xl mr-12">
@@ -59,9 +59,8 @@ const Services = () => {
           ))}
         </div>
       </section>
-
-      <section className="h-screen bg-[#000000]">
-        <div className="flex justify-center items-center py-36 h-[100vh]">
+      <section className="h-full bg-[#000000]">
+        <div className="flex justify-center items-end pt-2 h-[70vh]">
           <div
             className="h-[50vh] w-full relative"
             style={{
@@ -91,11 +90,9 @@ const Services = () => {
             }}
           >
             <div className="text-white absolute flex flex-col items-start justify-start px-5 py-5 bottom-0 left-0 right-0 backdrop bg-black/30 h-[30vh]">
-            <h2 className="text-white text-3xl font-semibold italic">CARSTAR Cares</h2>
+            <h2 className="text-white text-3xl font-semibold italic">National Warranty</h2>
               <p className="text-sm mt-5">
-                Our company has always done so much more than just repairing
-                cars. We want to make the world a better place, one car, one
-                person and one community at time.
+              You can trust your vehicle repair to CARSTAR. We stand behind our work with our Lifetime Nationwide Warranty on qualifying repairs. Please refer to the official CARSTAR Warranty Document for specific coverage and excluded items.
               </p>
               <Button/>
             </div>
@@ -110,11 +107,9 @@ const Services = () => {
             }}
           >
             <div className="text-white absolute flex flex-col items-start px-5 justify-start pt-5 bottom-0 left-0 right-0 backdrop bg-black/30 h-[30vh] ">
-              <h2 className="text-white text-3xl font-semibold italic">CARSTAR Cares</h2>
-              <p>
-                Our company has always done so much more than just repairing
-                cars. We want to make the world a better place, one car, one
-                person and one community at time.
+              <h2 className="text-white text-3xl font-semibold italic">Rental Car Assistance</h2>
+              <p className="text-sm mt-5">
+              We'll coordinate a rental car for you through your insurance company with one of our preferred providers.
               </p>
               <Button/>
             </div>

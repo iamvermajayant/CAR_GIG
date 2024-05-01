@@ -47,7 +47,7 @@ const Services = () => {
         </p>
       </section>
       <section className="h-full pt-48 bg-[#000000] flex justify-center">
-        <div className="w-fit grid justify-center grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
+        <div className="w-fit grid justify-center grid-cols-1 lg:grid-cols-3 md:grid-cols-2 overflow-hidden">
           {cardsData.map((card, index) => (
             <div key={index} className="flex justify-center">
               <Card
@@ -60,7 +60,7 @@ const Services = () => {
         </div>
       </section>
       <section className="h-full bg-[#000000]">
-        <div className="flex justify-center items-end pt-2 h-[70vh]">
+        <div className="flex justify-center items-end pt-2 h-[60vh]">
           <div
             className="h-[50vh] w-full relative"
             style={{

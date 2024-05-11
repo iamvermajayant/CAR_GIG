@@ -106,10 +106,10 @@ const Services = () => {
               backgroundSize: "cover",
             }}
           >
-            <div className="text-white absolute flex flex-col items-start px-5 justify-start pt-5 bottom-0 left-0 right-0 backdrop bg-black/30 h-[30vh] ">
+            <div className="text-white absolute flex flex-col items-start px-5 justify-start pt-5 bottom-0 left-0 right-0 bacakdrop bg-black/30 h-[30vh] ">
               <h2 className="text-white text-3xl font-semibold italic">Rental Car Assistance</h2>
               <p className="text-sm mt-5">
-              We'll coordinate a rental car for you through your insurance company with one of our preferred providers.
+              We,ll coordinate a rental car for you through your insurance company with one of our preferred providers.
               </p>
               <Button/>
             </div>
